@@ -1,0 +1,63 @@
+# Project 3: Random Walk.
+
+* Author: Lucas Marchand
+* Class: CS121 Section 6
+* Semester: Spring 2018
+
+## Overview
+
+Creates a pathway from the bottom left corner to the top right corner
+of a user specified grid randomly stepping.
+
+## Compiling and Using
+
+when running the RandomWalkDriver program, the user will specify a positive
+integer for a grid size, and a non-negative integer for a seed of the number
+generator. This will be prompted by the console and will return the path as 
+a formatted string to the console for the user to see.
+
+When the user runs the RandomWalkGUI program. The user will pass in the arguments
+for grid size and a seed value without being prompted by the console. This will
+create a graphical representaiton of the path for the user to see.
+
+## Discussion
+
+There was a ton of issues when it came to figuring out how to get the proper 
+end point to the program. For some reason I was hung up on the test class not
+being able to get the correct value for my end point to the array list. This
+ultimately was resolved when I realized that java frames are odd in their
+coordinate systems and threw me for a loop.
+
+The other issues I had alot of trouble with was encapsulating the arraylist
+so that it couldnt be accessed externally. It was not until after I went to 
+the arraylist API that I found there was a method that allowed me to give
+a clone of the arraylist without actually returning the ArrayList itself.
+
+Overall this was a fun and challenging project and it was a great intro to
+writing our own classes.
+
+IMPROVEMENTS: Explain what "implements" means in regards to an interface. It
+took me more time to figure that out than half of the methods I was writing.
+
+## Testing
+
+Testing involved trying several negative integers for the RandomWalkDriver 
+program to see if it would accept anything that was going to give incorrect
+results. Currently the program does not handle if the user enters a double
+value. 
+
+the seed value was tested with border cases such as -1,0,1000 to see if any
+of those would make it throw an exception.
+
+## Extra Credit
+
+not attempted
+
+## Sources used
+
+Source used to understand interfaces and implementing them:
+https://docs.oracle.com/javase/tutorial/java/IandI/usinginterface.html
+
+for documenting using javadoc
+
+https://stackoverflow.com/questions/5011291/usage-of-see-in-javadoc
